@@ -7,14 +7,15 @@
             [juno.events]
             [juno.subs] ;; require so the compiler knows about them
             [juno.views]
-            [devtools.core :as devtools])
+            ;;[devtools.core :as devtools]
+            )
   (:import [goog History]
            [goog.history EventType]))
 
 
 ;; debugging in dev 
-(devtools/install! [:formatters])
-(enable-console-print!)
+;;(devtools/install! [:formatters])
+;;(enable-console-print!)
 
 ;; init the app-db  with a placeholder
 (dispatch-sync [:initialise-db])

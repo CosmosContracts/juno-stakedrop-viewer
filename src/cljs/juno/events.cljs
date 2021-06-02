@@ -47,7 +47,7 @@
  (fn
    [{db :db} [_ address]]
    (if address
-     (let [endpoint (str dev-host "/address/" address)]
+     (let [endpoint (str prod-host "/address/" address)]
       {:http-xhrio {:method :get
                     :uri endpoint
                     :format (ajax/json-request-format)
