@@ -6,11 +6,13 @@
     [ajax.core :as ajax]
     [day8.re-frame.http-fx]))
 
+;; switch to this to use the dev backend
 (def dev-host "http://localhost:3001")
+
 ;; switch to this and run lein prod to build the prod app
 ;; env vars can be defined in the closures for the compiler
 ;; will switch to that at some point
-;; (def prod-host "https:")
+(def prod-host "https://stakedrop.junochain.com")
 
 (defn check-and-throw
   "Throws an exception if `db` doesn't match the Spec `a-spec`."
