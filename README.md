@@ -125,3 +125,9 @@ Always inspect the `resources/public/js/compiled` directory prior to deploying t
 `lein` alias in this project after `lein dev` will, at the very least, run `lein clean`, which
 deletes this generated directory. Further, running `lein dev` will generate many, much larger
 development versions of the files in this directory.
+
+Then, minify the css:
+
+```sh
+npm run minify-css
+```

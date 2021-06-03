@@ -1,10 +1,13 @@
 {
   "devDependencies": {
-    "shadow-cljs": "2.8.83",
+    "cssnano": "^5.0.5",
     "karma": "4.4.1",
     "karma-chrome-launcher": "3.1.0",
     "karma-cljs-test": "0.1.0",
-    "karma-junit-reporter": "2.0.1"
+    "karma-junit-reporter": "2.0.1",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "shadow-cljs": "2.8.83"
   },
   "dependencies": {
     "highlight.js": "9.15.10",
@@ -13,6 +16,7 @@
     "react-highlight.js": "1.0.7"
   },
   "scripts": {
-    "dev:watch": "shadow-cljs watch app"
+    "dev:watch": "shadow-cljs watch app",
+    "minify-css": "postcss resources/public/juno.css > resources/public/juno.min.css"
   }
 }

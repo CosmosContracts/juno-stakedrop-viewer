@@ -16,7 +16,7 @@
       [title]
       [:div.container-xs
        [:p {:class "m-0 mb-32"}
-        "To find out what your stakedrop allocation is, please enter your address below."]]]]]])
+        "To find out what your stakedrop allocation is, please enter your Cosmos address below."]]]]]])
 
 (defn address-form []
   (let [address @(subscribe [:account/address]) ;; if they've got a session active
@@ -58,25 +58,26 @@
     (if (not (empty? error-str))
       [balance-container error-str]
         (if (and (not (nil? balance))
-              (not (empty? balance)))
+                 (not (empty? balance)))
 
           [balance-container (str "Your balance is: "
                                   balance
                                   " "
-                                   (str/upper-case denom)
-                                   ".")]
-          [balance-container "Enter an address to query balance."]))))
+                                  (str/upper-case denom)
+                                  ".")]
+          [balance-container "Enter a Cosmos address to query balance."]))))
 
 (defn contributing []
   [:section {:class "section pb-128"}
-   [:div.cta
-    [:div {:class "cta-inner section-inner cta-split"}
-     [:div.cta-slogan 
-      [:h3.m-0 "Want to contribute to the Juno network?"]]
-     [:div.cta-action
-      [:a {:href "https://discord.gg/wHdzjS5vXx"
-           :class "button button-success button-wide-mobile"}
-       "Dev Discord"]]]]])
+   [:div.container
+    [:div.cta
+     [:div {:class "cta-inner section-inner cta-split"}
+      [:div.cta-slogan 
+       [:h3.m-0 "Want to contribute to the Juno network?"]]
+      [:div.cta-action
+       [:a {:href "https://discord.gg/wHdzjS5vXx"
+            :class "button button-success button-wide-mobile"}
+        "Dev Discord"]]]]]])
 
 (defn footer-top []
   [:div {:class "footer-top space-between text-xxs"}
