@@ -12,7 +12,7 @@
 ;; switch to this and run lein prod to build the prod app
 ;; env vars can be defined in the closures for the compiler
 ;; will switch to that at some point
-(def prod-host "https://stakedrop.junochain.com")
+(def prod-host "https://stakedrop-api.junochain.com")
 
 (defn check-and-throw
   "Throws an exception if `db` doesn't match the Spec `a-spec`."
